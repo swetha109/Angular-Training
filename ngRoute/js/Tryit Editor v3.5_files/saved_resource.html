@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!-- saved from url=(0079)https://www.w3schools.com/angular/tryit.asp?filename=try_ng_directive_attribute -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style><script src="./angular.min.js.download"></script>
+</head><body ng-app="myApp" contenteditable="false">
+<w3-test-directive></w3-test-directive>
+<div w3-test-directive=""></div>
+<div class="w3-test-directive"></div>
+<script>
+ angular.module("myApp", []);
+.directive("w3TestDirective",w3TestDirective)
+             function w3TestDirective(){
+    return {
+        templateUrl: "<h1>Made by a directive!</h1>"
+        restrict:'E'
+    };
+}
+</script>
+
+
+
+</body></html>
