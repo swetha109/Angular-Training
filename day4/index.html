@@ -1,0 +1,22 @@
+<html ng-app="project1">
+    <head>
+        <title>oi</title>
+        <script src="angular.min.js"></script>
+        <script src="swe2.js"></script>
+    </head>
+    <body>
+        <div ng-controller="ctrl">
+                {{obj1.name}},{{obj1.salary}}
+         <div ng-repeat="x in arr">{{x}}</div>
+         </div>
+         <div ng-controller="ctrl1">
+                {{obj2.name}},{{obj2.gender}}
+        <div ng-repeat="y in arr1">{{y.type}},{{y.model}}</div>
+          </div>
+          <div ng-controller="ctrl2">
+                {{obj3.name}},{{obj3.gender}}
+            <div ng-repeat="z in arr2">{{z.type}},{{z.model}}</div>
+        </div>   
+
+    </body>
+    </html>
