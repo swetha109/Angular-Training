@@ -1,0 +1,27 @@
+<html ng-app="">
+    <head>
+        
+        <script src="angular.min.js"></script>
+       
+
+            </head>
+    <body>
+            <form name="myForm">
+
+                    Click here to make the input field required:
+                    
+                    <input type="checkbox" ng-model="myVar"><br><br>
+                    
+                    <input name="myInput" ng-model="myInput" ng-required="myVar">
+                    
+                    <h1 ng-if="!myForm.myInput.$valid">The input field cannot be empty</h1>
+                    
+                    </form>
+                    
+                    <p>In this example, we will display an error if the field is empty AND the checkbox is checked for "required".</p>
+                    
+                   
+            </body>
+            </html>
+            
+
