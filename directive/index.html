@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html  ng-app="customDirective">
+<head>
+	<title>Todo List</title>
+	<script src="js/angular.min.js"></script>
+	<script src="js/app.js"></script>
+</head>
+<body>
+	<div ng-controller="homtCtrl">
+	<h2 >Parent scope value {{ hack }} </h2>
+
+         <div shared-directive ></div>
+			<br>
+			<br>
+		<div inherited-directive ></div>
+		<br>
+		<br>
+	<one-way-directive naame="{{ student.name }}"></one-way-directive>
+		<br>
+		<br>
+	<two-way-directive student="student"></two-way-directive>
+		<br>
+		<br>
+	<method-directive student='student' swap='swapData()'></method-directive>
+		<br>
+		<br>
+	<div my-book book="book"></div>
+</div>
+
+</body>
+</html>
