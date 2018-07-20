@@ -1,0 +1,62 @@
+<div ng-controller="regctrl">
+    <div class="container">
+        <div class="jumbotron">
+
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <button type="button" style="background-color:darkcyan" class="btn btn-primary  btn-block" ng-click="toggle(0)">SIGNIN</button>
+                </div>
+                <div class="col-sm-6">
+                    <button type="button" style="background-color:darkcyan" class="btn btn-primary btn-block " ng-click="toggle(1)">SIGNUP</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="jumbotron">
+            <div class="container" ng-if="formValue">
+                <form name="myForm">
+                    <div class="form-group">
+                        <label for="email" style="background-color:black">Email:</label>
+                        <input type="email" class="form-control" placeholder="Enter email" name="email" ng-model="signIn.email" required>
+                        <span style="color:red" ng-show="myForm.email.$touched && myForm.email.$invalid">
+                            <span ng-show="myForm.email.$error.required">Email is required.</span>
+                            <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd" style="background-color:black">Password:</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" ng-model="signIn.pwd" required>
+                        <span style="color:red" ng-show="myForm.pwd.$touched && myForm.pwd.$invalid">Password is required</span>
+                    </div>
+                    <button type="submit" style="background-color:darkcyan" class="btn btn-default" ng-disabled="myForm.$invalid" ng-click="signin()">Sign In</button>
+                </form>
+            </div>
+            <div class="container" ng-if="!formValue">
+                <form name="myForm1">
+                    <div class="form-group">
+                        <label for="username" style="background-color:black">User Name:</label>
+                        <input type="text" class="form-control" placeholder="Enter username" name="username" ng-model="signUp.userName" required>
+                        <span style="color:red" ng-show="myForm1.username.$touched && myForm1.username.$invalid">User Name is required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" style="background-color:black">Email:</label>
+                        <input type="email" class="form-control" placeholder="Enter email" name="email" ng-model="signUp.email" required>
+                        
+                        <span style="color:red" ng-show="myForm1.email.$touched && myForm1.email.$invalid">
+
+                            <span ng-show="myForm1.email.$error.required">Email is required.</span>
+                            <span ng-show="myForm1.email.$error.email">Invalid email address.</span>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd" style="background-color: black">Password:</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" ng-model="signUp.pwd">
+                    </div>
+                    <button type="submit" style="background-color:darkcyan" class="btn btn-default" ng-disabled="myForm1.$invalid" ng-click="signup()">Sign up </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
